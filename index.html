@@ -48,7 +48,7 @@
             margin-top: 20px;
             font-weight: bold;
             color: #E5989B;
-            animation: pulse 1.5s infinite;
+           
         }
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -146,8 +146,15 @@
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
             document.getElementById("countdown").innerText = 
-                `Осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
+                `Осталось: ${days} дней ${hours} : ${minutes} : ${seconds} :`;
         }
+
+
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
+
 
         updateCountdown(); // Первоначальный запуск
         setInterval(updateCountdown, 1000); // Обновление каждую секунду
