@@ -44,7 +44,7 @@
             color: #B56576;
         }
         .countdown {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-top: 20px;
             font-weight: bold;
             color: #E5989B;
@@ -91,42 +91,13 @@
         .button:hover {
             background-color: #E5989B;
         }
-
-        /* Цвета свадьбы */
-        .color-palette {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .color-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        .color-circle:hover {
-            transform: scale(1.1);
-        }
-        .color-names {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* Медиазапросы */
         @media (max-width: 768px) {
-            .countdown { font-size: 1.6em; }
+            .countdown { font-size: 1.4em; }
             .program-item { font-size: 0.9em; }
             section { padding: 40px 15px; }
         }
-
         @media (max-width: 480px) {
-            .countdown { font-size: 1.4em; }
+            .countdown { font-size: 1.2em; }
             section { padding: 30px 10px; }
         }
     </style>
@@ -135,30 +106,11 @@
     <section>
         <div class="container">
             <h1>Приглашение на свадьбу</h1>
-            <h2>Руслан & Вероника</h2>
-            <p>Наша свадьба состоится 17 августа!</p>
+            <h2>Анна & Дмитрий</h2>
+            <p>Наша свадьба состоится 17 августа 2025 года!</p>
             <div class="countdown" id="countdown"></div>
-
-<script>
-    function updateCountdown() {
-        const weddingDate = new Date("August 17, 2025 00:00:00").getTime();
-        const now = new Date().getTime();
-        const timeLeft = weddingDate - now;
-
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").innerText = 
-            `Осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
-    }
-
-    updateCountdown(); // Первоначальный запуск
-    setInterval(updateCountdown, 1000); // Обновление каждую секунду
-</script>
-
-            
+            <img src="wedding_invite.jpg" alt="Свадебное приглашение">
+            <button class="button">Подтвердить участие</button>
         </div>
     </section>
     
@@ -183,37 +135,24 @@
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <h2>Цвета свадьбы</h2>
-            <p>Нежные пастельные оттенки, создающие атмосферу любви и уюта.</p>
-            <div class="color-palette">
-                <div class="color-circle" style="background-color: #FAE3E3;"></div>
-                <div class="color-circle" style="background-color: #F8C8C8;"></div>
-                <div class="color-circle" style="background-color: #FCE8D5;"></div>
-                <div class="color-circle" style="background-color: #E5989B;"></div>
-                <div class="color-circle" style="background-color: #F4A9A8;"></div>
-            </div>
-            <div class="color-names">
-                <span>#FAE3E3</span>
-                <span>#F8C8C8</span>
-                <span>#FCE8D5</span>
-                <span>#E5989B</span>
-                <span>#F4A9A8</span>
-            </div>
-        </div>
-    </section>
-
     <script>
         function updateCountdown() {
-            const weddingDate = new Date("August 16, 2025 00:00:00").getTime();
+            const weddingDate = new Date("August 17, 2025 00:00:00").getTime();
             const now = new Date().getTime();
-            const distance = weddingDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById("countdown").innerText = `Осталось: ${days} дней`;
+            const timeLeft = weddingDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerText = 
+                `Осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
         }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+
+        updateCountdown(); // Первоначальный запуск
+        setInterval(updateCountdown, 1000); // Обновление каждую секунду
     </script>
 </body>
 </html>
+
