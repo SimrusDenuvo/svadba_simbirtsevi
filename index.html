@@ -136,10 +136,29 @@
         <div class="container">
             <h1>Приглашение на свадьбу</h1>
             <h2>Анна & Дмитрий</h2>
-            <p>Наша свадьба состоится 16 августа!</p>
+            <p>Наша свадьба состоится 17 августа!</p>
             <div class="countdown" id="countdown"></div>
-            <img src="wedding_invite.jpg" alt="Свадебное приглашение">
-            <button class="button">Подтвердить участие</button>
+
+<script>
+    function updateCountdown() {
+        const weddingDate = new Date("August 17, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText = 
+            `Осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
+    }
+
+    updateCountdown(); // Первоначальный запуск
+    setInterval(updateCountdown, 1000); // Обновление каждую секунду
+</script>
+
+            
         </div>
     </section>
     
