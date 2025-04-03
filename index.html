@@ -184,14 +184,47 @@
             color: #555;
         }
 
+  .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            color: #000;
+            position: absolute;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .name-rus{
+            left: -50px;
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+        .name-nika {
+            right: -50px;
+            top: 0;
+        }
 
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-top: 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #F4A9A8;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
     </style>
 </head>
 <body>
     <section>
         <div class="container">
             <h1>Приглашение на свадьбу</h1>
-            <h2>Руслан & Вероника</h2>
+            <div class="image-container">
+                <div class="names name-rus">Руслан</div>
+                <img src="svadba/1.jpgg" alt="Руслан и Вероника">
+                <div class="names name-nika">Вероника</div>
+            </div>
             <p>Наша свадьба состоится 17 августа 2025 года!</p>
             <div class="countdown" id="countdown">
                 <div class="time-block">
