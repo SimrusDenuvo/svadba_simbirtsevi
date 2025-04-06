@@ -327,53 +327,115 @@ img {
       }
     }
 
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    h1, h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .image-container {
+        height: 600px;
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 768px) {
-  .calendar {
-    grid-template-columns: repeat(7, 1fr);
-    font-size: 0.85rem;
-    gap: 0.3rem;
-  }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
 
-  .day {
-    padding: 0.5rem;
-  }
+    .calendar {
+        grid-template-columns: repeat(5, 1fr);
+    }
 
-  .container {
-    padding: 10px;
-  }
+    .countdown {
+        font-size: 1.8em;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .image-container {
-    height: 200px;
-  }
+    h1, h2 {
+        font-size: 28px;
+    }
 
-  h1, h2 {
-    font-size: 1.5rem;
-  }
+    p {
+        font-size: 16px;
+    }
 
-  .time-number {
-    font-size: 1.5rem;
-  }
+    .image-container {
+        height: 400px;
+    }
+
+    .program-item {
+        font-size: 0.95em;
+    }
 }
 
 @media (max-width: 480px) {
-  .calendar {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+    .calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-  .day-name {
-    display: none;
-  }
+    .day-name {
+        font-size: 0.7em;
+    }
 
-  .day {
-    font-size: 0.8rem;
-  }
+    .day {
+        padding: 0.5rem;
+        font-size: 0.75em;
+    }
 
-  .countdown {
-    flex-direction: column;
-    align-items: center;
-  }
+    .countdown {
+        font-size: 1.5em;
+    }
+
+    .time-number {
+        font-size: 1.2em;
+    }
+
+    .time-label {
+        font-size: 0.6em;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    .calendar-container {
+        padding: 1rem;
+    }
 }
