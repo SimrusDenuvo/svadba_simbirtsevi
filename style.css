@@ -240,7 +240,8 @@ img {
 
 
 
-.calendar-container {
+
+    .calendar-container {
       background-color: #fff;
       padding: 2rem;
       border-radius: 20px;
@@ -277,7 +278,8 @@ img {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      font-weight: normal;
+      color: #333;
     }
 
     .day:hover {
@@ -285,20 +287,11 @@ img {
       transform: scale(1.05);
     }
 
-    .day.selected::before {
-      content: "17";
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background-color: #8B4513; /* коричневый */
-      color: #fff;
+    .day.selected {
+      background-color: #5C3317; /* насыщенно-коричневый */
+      color: #fff;               /* белый текст */
       font-weight: bold;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
-      font-size: 1rem;
+      box-shadow: 0 0 8px rgba(92, 51, 23, 0.4);
     }
 
     .day.empty {
