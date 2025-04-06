@@ -240,7 +240,10 @@ img {
 
 
 
-
+.cal{
+    display: flex;
+    justify-content: center;
+}
 .calendar-container {
       background-color: #fff;
       padding: 2rem;
