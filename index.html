@@ -218,12 +218,13 @@
         </select>
         <small>Вы можете выбрать несколько вариантов, удерживая Ctrl (или Command на Mac)</small>
       </div>
-     <label for="food">Пожелания по еде (необязательно):</label>
+
+      <label for="food">Пожелания по еде (необязательно):</label>
       <input type="text" id="food" name="food" placeholder="например, вегетарианская, без глютена...">
 
       <button type="submit" class="button">Отправить</button>
     </form>
-       <p id="formMessage"></p>
+    <p id="formMessage"></p>
   </div>
 </section>
 
@@ -272,10 +273,16 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const fio = document.getElementById("fio").value;
-      const attendance = document.querySelector('input[name="attendance"]:checked')?.value || "";
-      const drinks = Array.from(document.querySelectorAll('input[name="drinks"]:checked')).map(el => el.value);
+      const fio = document.getElementById("name").value; // Исправил id с fio на name
+      const attendance = document.getElementById("attendance").value; // Прочитаем значение выбора
+      const drinks = Array.from(document.getElementById("drinks").selectedOptions).map(option => option.value); // Получаем все выбранные напитки
       const food = document.getElementById("food").value;
+
+      // Проверка на данные
+      if (!fio || !attendance) {
+        alert("Пожалуйста, заполните все обязательные поля.");
+        return;
+      }
 
       fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
         method: "POST",
@@ -284,11 +291,11 @@
       })
       .then(response => response.json())
       .then(data => {
-        alert("Спасибо! Ответ записан.");
+        alert("Спасибо! Ваш ответ был записан.");
         form.reset();
       })
       .catch(error => {
-        alert("Ошибка при отправке.");
+        alert("Ошибка при отправке данных.");
         console.error("Ошибка:", error);
       });
     });
