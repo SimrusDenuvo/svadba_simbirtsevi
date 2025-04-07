@@ -217,9 +217,12 @@
         </select>
         <small>Вы можете выбрать несколько вариантов, удерживая Ctrl (или Command на Mac)</small>
       </div>
+     <label for="food">Пожелания по еде (необязательно):</label>
+      <input type="text" id="food" name="food" placeholder="например, вегетарианская, без глютена...">
 
       <button type="submit" class="button">Отправить</button>
     </form>
+       <p id="formMessage"></p>
   </div>
 </section>
 
@@ -256,5 +259,39 @@
         setInterval(updateCountdown, 1000); // Обновление каждую секунду
     </script>
 
+
+
+
+    <script>
+  document.getElementById("weddingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const drinks = [...document.querySelectorAll('input[name="drinks"]:checked')].map(el => el.value);
+
+    const data = {
+      fio: document.getElementById("fio").value,
+      attendance: document.getElementById("attendance").value,
+      drinks: drinks,
+      food: document.getElementById("food").value,
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById("formMessage").innerText = "Спасибо! Анкета отправлена.";
+        document.getElementById("weddingForm").reset();
+      })
+      .catch(err => {
+        document.getElementById("formMessage").innerText = "Ошибка при отправке.";
+        console.error(err);
+      });
+  });
+</script>
 </body>
 </html>
