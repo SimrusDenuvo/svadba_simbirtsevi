@@ -262,44 +262,54 @@
     </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("guestForm");
+ document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("guestForm");
 
-    if (!form) {
-      console.error("Форма не найдена!");
+  if (!form) {
+    console.error("Форма не найдена!");
+    return;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const fio = encodeURIComponent(document.getElementById("name").value);
+    const attendance = encodeURIComponent(document.getElementById("attendance").value);
+    const drinks = Array.from(document.getElementById("drinks").selectedOptions)
+                      .map(option => encodeURIComponent(option.value))
+                      .join('&drinks=');
+    const food = encodeURIComponent(document.getElementById("food").value);
+
+    // Проверка на данные
+    if (!fio || !attendance) {
+      alert("Пожалуйста, заполните все обязательные поля.");
       return;
     }
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+    // Формируем URL с параметрами
+    const url = `https://script.google.com/macros/s/AKfycbydVJLh02SM7EF35tb6nRJC5_mIGd27geDnZ7TeD1q7K_7mCNLIPPHUC2B3LUgQTISKXg/exec?name=${fio}&attendance=${attendance}&drinks=${drinks}&food=${food}`;
 
-      const fio = document.getElementById("name").value; // Исправил id с fio на name
-      const attendance = document.getElementById("attendance").value; // Прочитаем значение выбора
-      const drinks = Array.from(document.getElementById("drinks").selectedOptions).map(option => option.value); // Получаем все выбранные напитки
-      const food = document.getElementById("food").value;
-
-      // Проверка на данные
-      if (!fio || !attendance) {
-        alert("Пожалуйста, заполните все обязательные поля.");
-        return;
-      }
-
-      fetch("https://script.google.com/macros/s/AKfycbzCkUjLe2GxIMPf3t6AfcUUDv5JnrZJL68Oos86ZVb0Vm-r8-wjz0aOOGM29qoidjyPIg/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fio, attendance, drinks, food })
-      })
-      .then(response => response.json())
-      .then(data => {
+    fetch(url, {
+      method: "GET",
+      redirect: "follow"
+    })
+    .then(response => {
+      if (response.ok) {
         alert("Спасибо! Ваш ответ был записан.");
         form.reset();
-      })
-      .catch(error => {
-        alert("Ошибка при отправке данных.");
-        console.error("Ошибка:", error);
-      });
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .catch(error => {
+      alert("Ошибка при отправке данных.");
+      console.error("Ошибка:", error);
     });
   });
+});
+
+
+    
 </script>
 </body>
 </html>
