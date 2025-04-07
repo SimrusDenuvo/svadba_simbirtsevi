@@ -187,45 +187,35 @@
     </div> 
 </section>
 
-<section class="guest-form-section">
-  <div class="container guest-form grey">
-    <h2>АНКЕТА ГОСТЯ</h2>
-    <form id="guestForm">
-      <div class="form-group">
-        <label for="name">Ваши фамилия и имя:</label>
-        <input type="text" id="name" name="name" required placeholder="Иванов Иван">
-      </div>
 
-      <div class="form-group">
-        <label for="attendance">Вы будете присутствовать?</label>
-        <select id="attendance" name="attendance" required>
-          <option value="">Выберите вариант</option>
-          <option value="yes">Да</option>
-          <option value="no">Нет</option>
-        </select>
-      </div>
+<section class="form-section">
+  <div class="container">
+    <h2>Анкета гостя</h2>
+    <form id="guest-form">
+      <label for="fio">Фамилия и имя:</label><br>
+      <input type="text" id="fio" name="fio" required><br><br>
 
-      <div class="form-group">
-        <label for="drinks">Предпочтение в алкогольных напитках:</label>
-        <select id="drinks" name="drinks" multiple size="5">
-          <option value="wine">Вино</option>
-          <option value="champagne">Шампанское</option>
-          <option value="vodka">Водка</option>
-          <option value="whiskey">Виски</option>
-          <option value="cocktails">Коктейли</option>
-          <option value="non-alcoholic">Безалкогольное</option>
-        </select>
-        <small>Вы можете выбрать несколько вариантов, удерживая Ctrl (или Command на Mac)</small>
-      </div>
-     <label for="food">Пожелания по еде (необязательно):</label>
-      <input type="text" id="food" name="food" placeholder="например, вегетарианская, без глютена...">
+      <label>Вы будете присутствовать?</label><br>
+      <input type="radio" id="yes" name="attendance" value="Да" required>
+      <label for="yes">Да</label>
+      <input type="radio" id="no" name="attendance" value="Нет">
+      <label for="no">Нет</label><br><br>
+
+      <label>Предпочтение в алкогольных напитках:</label><br>
+      <input type="checkbox" id="wine" name="drinks" value="Вино">
+      <label for="wine">Вино</label>
+      <input type="checkbox" id="vodka" name="drinks" value="Водка">
+      <label for="vodka">Водка</label>
+      <input type="checkbox" id="champagne" name="drinks" value="Шампанское">
+      <label for="champagne">Шампанское</label><br><br>
+
+      <label for="food">Пожелания по еде:</label><br>
+      <input type="text" id="food" name="food"><br><br>
 
       <button type="submit" class="button">Отправить</button>
     </form>
-       <p id="formMessage"></p>
   </div>
 </section>
-
     
    <script>
         function pluralize(value, one, two, many) {
@@ -260,33 +250,38 @@
     </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('guest-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("guest-form");
 
-    const fio = document.getElementById('fio').value;
-    const attendance = document.querySelector('input[name="attendance"]:checked')?.value || "";
-    const drinks = Array.from(document.querySelectorAll('input[name="drinks"]:checked')).map(el => el.value);
-    const food = document.getElementById('food').value;
+    if (!form) {
+      console.error("Форма не найдена!");
+      return;
+    }
 
-    fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
-      method: "POST",
-      body: JSON.stringify({ fio, attendance, drinks, food }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert("Спасибо за ответ!");
-      document.getElementById('guest-form').reset();
-    })
-    .catch(error => {
-      console.error("Ошибка отправки:", error);
-      alert("Произошла ошибка при отправке данных.");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fio = document.getElementById("fio").value;
+      const attendance = document.querySelector('input[name="attendance"]:checked')?.value || "";
+      const drinks = Array.from(document.querySelectorAll('input[name="drinks"]:checked')).map(el => el.value);
+      const food = document.getElementById("food").value;
+
+      fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fio, attendance, drinks, food })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert("Спасибо! Ответ записан.");
+        form.reset();
+      })
+      .catch(error => {
+        alert("Ошибка при отправке.");
+        console.error("Ошибка:", error);
+      });
     });
   });
-});
 </script>
 </body>
 </html>
