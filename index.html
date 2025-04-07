@@ -260,38 +260,32 @@
     </script>
 
 
-
-
     <script>
-  document.getElementById("weddingForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById('guest-form').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const drinks = [...document.querySelectorAll('input[name="drinks"]:checked')].map(el => el.value);
+  const fio = document.getElementById('fio').value;
+  const attendance = document.querySelector('input[name="attendance"]:checked')?.value || "";
+  const drinks = Array.from(document.querySelectorAll('input[name="drinks"]:checked')).map(el => el.value);
+  const food = document.getElementById('food').value;
 
-    const data = {
-      fio: document.getElementById("fio").value,
-      attendance: document.getElementById("attendance").value,
-      drinks: drinks,
-      food: document.getElementById("food").value,
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(res => res.json())
-      .then(res => {
-        document.getElementById("formMessage").innerText = "Спасибо! Анкета отправлена.";
-        document.getElementById("weddingForm").reset();
-      })
-      .catch(err => {
-        document.getElementById("formMessage").innerText = "Ошибка при отправке.";
-        console.error(err);
-      });
+  fetch("https://script.google.com/macros/s/AKfycbwWGOdlrIGn7qw69j3espUpiTpv3TG-kf3hdS1F8koxDlkXsFLcPzqt39LbsKMjMHs6DA/exec", {
+    method: "POST",
+    body: JSON.stringify({ fio, attendance, drinks, food }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Спасибо за ответ!");
+    document.getElementById('guest-form').reset();
+  })
+  .catch(error => {
+    console.error("Ошибка отправки:", error);
+    alert("Произошла ошибка при отправке данных.");
   });
+});
 </script>
 </body>
 </html>
