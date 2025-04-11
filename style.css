@@ -74,11 +74,13 @@ img {
     float: left;
     color: #fff;
     font-size: 40px;
+    margin-top: 60px;
 }
 #ruslan{
     float: right;
     color: #fff;
     font-size: 40px;
+    margin-top: 60px;
 }
 /* Стиль таймера */
 .countdown {
@@ -401,6 +403,14 @@ img {
 }
 
 @media (max-width: 768px) {
+    #veronika{
+    font-size: 34px;
+    margin-top: 40px;
+    }
+    #ruslan{
+    font-size: 34px;
+    margin-top: 40px;
+    }
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -433,6 +443,14 @@ img {
 }
 
 @media (max-width: 480px) {
+    #veronika{
+        font-size: 26px;
+        margin-top: 40px;
+    }
+    #ruslan{
+        font-size: 26px;
+        margin-top: 40px;
+    }
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
