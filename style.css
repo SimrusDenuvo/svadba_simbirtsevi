@@ -143,7 +143,7 @@ img {
 
 
  .names {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 48px;
     color: #000;
     position: absolute;
@@ -153,11 +153,12 @@ img {
 
 .button {
     display: inline-block;
+    font-family: 'Comfortaa', sans-serif;
     padding: 12px 20px;
     margin-top: 15px;
     font-size: 18px;
     color: white;
-    background-color: #F4A9A8;
+    background-color: #654020;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -172,6 +173,7 @@ img {
 
 .grey {
     background-color: #F8F8F8; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Адаптивность для мобильных устройств */
@@ -267,7 +269,7 @@ img {
     }
 
     .day.selected {
-      background-color: #5C3317; /* насыщенно-коричневый */
+      background-color: #654020; /* насыщенно-коричневый */
       color: #fff;               /* белый текст */
       font-weight: bold;
       box-shadow: 0 0 8px rgba(92, 51, 23, 0.4);
