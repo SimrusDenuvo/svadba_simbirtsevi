@@ -70,7 +70,11 @@ img {
     height: 1000px;
     background-size: cover;
 }
-
+.image-container h1{
+    color: #fff;
+    font-size: 40px;
+    font-style: 200;
+}
 
 /* Стиль таймера */
 .countdown {
