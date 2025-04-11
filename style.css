@@ -128,16 +128,17 @@ img {
 
 /* Стиль программы */
 .program-item {
-    background: #F8C8C8;
+    background: #D7BBA3;
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    font-size: 30px;
 }
 
 .program-item:hover {
-    background-color: #FCE8D5;
+    background-color: #F3E5D8;
 }
 
 
@@ -185,31 +186,6 @@ img {
     section { padding: 30px 10px; }
 }
 
-/* Цвета свадьбы */
-.color-palette {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-.color-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-.color-circle:hover {
-    transform: scale(1.1);
-}
-.color-names {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-}
 /* Цвета свадьбы */
 .color-palette {
     display: flex;
@@ -337,8 +313,6 @@ img {
 }
 
 .guest-form h2 {
-  font-size: 36px;
-  color: #5C3317;
   margin-bottom: 30px;
 }
 
