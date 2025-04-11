@@ -184,7 +184,6 @@ img {
 }
 
 @media (max-width: 480px) {
-    .countdown { font-size: 2em; }
     section { padding: 30px 10px; }
 }
 
@@ -444,7 +443,7 @@ img {
     }
 
     .countdown {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .time-number {
@@ -474,6 +473,12 @@ img {
     .calendar-container {
         padding: 1rem;
     }
+    label,
+    input,
+    textarea{
+        font-size: 12px;
+    }
+    
 }
 
 
