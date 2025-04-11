@@ -387,7 +387,7 @@ img {
     }
 
     .image-container {
-        height: 600px;
+        height: 700px;
         background-attachment: scroll;
     }
 }
@@ -416,7 +416,7 @@ img {
     }
 
     .image-container {
-        height: 400px;
+        height: 600px;
     }
 
     .program-item {
@@ -467,7 +467,7 @@ img {
     }
 
     .image-container {
-        height: 300px;
+        height: 500px;
     }
 
     .calendar-container {
