@@ -70,12 +70,16 @@ img {
     height: 1000px;
     background-size: cover;
 }
-.image-container h1{
+#veronika{
+    float: left;
     color: #fff;
     font-size: 40px;
-    font-style: 200;
 }
-
+#ruslan{
+    float: right;
+    color: #fff;
+    font-size: 40px;
+}
 /* Стиль таймера */
 .countdown {
     font-size: 3em;
