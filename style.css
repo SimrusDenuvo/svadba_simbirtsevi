@@ -477,10 +477,8 @@ img {
     .calendar-container {
         padding: 1rem;
     }
-    label,
-    input,
-    textarea{
-        font-size: 12px;
+    label{
+        font-size: 14px;
     }
     
 }
@@ -496,8 +494,9 @@ img {
   }
 
   .form-group input,
+.form-group textarea,
   .form-group select {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px;
   }
 
