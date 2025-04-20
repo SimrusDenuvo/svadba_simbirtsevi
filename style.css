@@ -41,6 +41,12 @@ h1, h2{
     font-size: 40px;
     font-style: 200;
 }
+
+ h3{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    font-size: 36px;
+}
 p{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     color: #000000;
