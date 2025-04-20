@@ -210,6 +210,7 @@
   </div>
 </section>
 <section>
+    <div class="container">
      <p>Если у вас есть вопросы по мероприятию, то можете обращаться к нашим организаторам</p>
     <table cellspacing="0" cellpadding="0" id="contact">
             <tr> 
@@ -220,7 +221,12 @@
                 <td id="leftcol"><a href="tel:+79126867161">+79126867161</a></td>
                 <td><a href="tel:+79222013230">+79222013230</a></td>
             </tr>
+            <tr> 
+                <td id="leftcol"><a href="https://t.me/Irina_Pukhalskaya" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"><div class="telegram-button"><i class="fa fa-telegram"></i></div></a></td>
+                <td><a href="https://t.me/maria_kolpaschikova" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"><div class="telegram-button"><i class="fa fa-telegram"></i></div></a></td>
+            </tr>
         </table>
+    </div>
 </section>
 
     <style type="text/css">
@@ -230,6 +236,85 @@
    #contact TD {
     vertical-align: top; /* Вертикальное выравнивание в ячейках */
    }
+    #contact TD a:active,
+    #contact TD a:hover,
+    #contact TD a    {
+          text-decoration: none;
+          color: #666;
+   }
+
+
+
+
+
+
+        .telegram-button {
+    position: fixed;
+    right: 13px;
+    bottom: 90px;
+    transform: translate(-50%, -50%);
+    background: #0088cc; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.telegram-button a {
+    color: #fff;
+}
+.telegram-button:before,
+.telegram-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #0088cc; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden; 
+}
+ 
+.telegram-button:after{
+    animation-delay: .5s;
+}
+ 
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@media (max-width : 800px) {  
+.telegram-button {   
+    bottom: 5px; /*отступ кнопки снизу от экрана*/
+    left: 70px; /*отступ кнопки слева от экрана(right - справа)*/
+  }
+}
+
+
+        
+}
    TD#leftcol {
     width: 200px; /* Ширина левой колонки в пикселах */
    }
@@ -243,6 +328,8 @@
    TD#leftcol {
     width: 200px; /* Ширина левой колонки в пикселах */
    }
+
+
   </style>
     
    <script>
