@@ -15,8 +15,8 @@
 <body>
 
         <div class="image-container">
-            <h1 id="veronika">Вероника</h1>
-            <h1 id="ruslan">Руслан</h1>
+            <h1 id="veronika">17 <br> 08 <br> 2025</h1>
+            <h1 id="ruslan">Руслан & <br> Вероника</h1>
         </div>
 <section>        
     <div class="container">
@@ -254,13 +254,21 @@
                 <td id="leftcol">Ирина</td>
                 <td>Мария</td>
             </tr>
-            <tr> 
+            <tr>
                 <td id="leftcol"><a href="tel:+79126867161">+79126867161</a></td>
                 <td><a href="tel:+79222013230">+79222013230</a></td>
             </tr>
             <tr> 
-                <td id="leftcol"><a href="https://t.me/Irina_Pukhalskaya" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"><div class="telegram-button"><i class="fa-brands fa-telegram"></i></div></a></td>
-                <td><a href="https://t.me/maria_kolpaschikova" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"><div class="telegram-button"><i class="fa-brands fa-telegram"></i></div></a></td>
+                <div class="icon"><td id="leftcol">
+                    <a href="https://t.me/Irina_Pukhalskaya" target="_blank" title="Написать в Telegram" rel="noopener noreferrer">
+                        <div class="telegram-button"><i class="fa-brands fa-telegram"></i></div>
+                    </a>
+                </div></td>
+                 <div class="icon"><td>
+                     <a href="https://t.me/maria_kolpaschikova" target="_blank" title="Написать в Telegram" rel="noopener noreferrer">
+                         <div class="telegram-button"><i class="fa-brands fa-telegram"></i></div>
+                </a>
+                </div></td>
             </tr>
         </table>
     </div>
@@ -273,7 +281,11 @@
     height: 30px;
     border-radius: 50%;
 }
-
+.icon{
+    padding:10px;
+    display:block;
+    margin:0 auto;
+}
 
 .polosa {
         background: linear-gradient(#000, #000) no-repeat center/2px 100%; }
