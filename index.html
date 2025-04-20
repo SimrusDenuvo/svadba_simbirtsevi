@@ -134,10 +134,12 @@
 <section>
     <div class="container">
         <h2>ПРОГРАММА МЕРОПРИЯТИЯ</h2>
-        <div class="program-item"><strong>16:00</strong> — Свадебная церемония</div>
-        <div class="program-item"><strong>17:00</strong> — Фотосессия</div>
-        <div class="program-item"><strong>18:00</strong> — Банкет</div>
-        <div class="program-item"><strong>21:00</strong> — Танцы и развлечения</div>
+        <table cellspacing="0" cellpadding="0" id="maket">
+            <tr> 
+                <td id="leftcol">Левая колонка</td>
+                <td>Правая колонка</td>
+            </tr>
+        </table>
         <div class="program-item"><strong>00:00</strong> — Завершение вечера</div>
 
     </div>
@@ -150,34 +152,11 @@
             Но мы будем очень благодарны, если вы
             поддержите цветовую гамму спокойных природных оттенков</p>
         <div class="color-palette">
-            <div class="color-circle" style="background-color: #F3DEDB;"></div>
-            <div class="color-circle" style="background-color: #E3CBC7;"></div>
             <div class="color-circle" style="background-color: #D3B0AA;"></div>
-            <div class="color-circle" style="background-color: #C38E8A;"></div>
-        </div>
-        <div class="color-palette">
-            <div class="color-circle" style="background-color: #F7E1D6;"></div>
-            <div class="color-circle" style="background-color: #E8C0B4;"></div>
             <div class="color-circle" style="background-color: #CFA08C;"></div>
-            <div class="color-circle" style="background-color: #BF8369;"></div>
-        </div>
-        <div class="color-palette">
-            <div class="color-circle" style="background-color: #F3E5D8;"></div>
-            <div class="color-circle" style="background-color: #D7BBA3;"></div>
             <div class="color-circle" style="background-color: #A88160;"></div>
-            <div class="color-circle" style="background-color: #654020;"></div>
-        </div>
-        <div class="color-palette">
-            <div class="color-circle" style="background-color: #EAEBDB;"></div>
-            <div class="color-circle" style="background-color: #D2D5BC;"></div>
             <div class="color-circle" style="background-color: #AAAE8D;"></div>
-            <div class="color-circle" style="background-color: #81846E;"></div>
-        </div>
-        <div class="color-palette">
-            <div class="color-circle" style="background-color: #FFFFFF;"></div>
-            <div class="color-circle" style="background-color: #CACCC7;"></div>
             <div class="color-circle" style="background-color: #9C9C9B;"></div>
-            <div class="color-circle" style="background-color: #282828;"></div>
         </div>
     </div>
 </section>
@@ -216,14 +195,14 @@
           <option value="champagne">Шампанское</option>
           <option value="vodka">Водка</option>
           <option value="whiskey">Виски</option>
-          <option value="cocktails">Коктейли</option>
+          <option value="cognac">Коньяк</option>
           <option value="non-alcoholic">Безалкогольное</option>
         </select>
         <small>Вы можете выбрать несколько вариантов, удерживая Ctrl (или Command на Mac)</small>
       </div>
     <div class="form-group">
       <label for="food">Пожелания по еде (необязательно):</label>
-      <textarea type="text" id="food" name="food" placeholder="например, вегетарианская, без глютена..."></textarea>
+      <textarea type="text" id="food" name="food" placeholder="например, есть ли аллергия на что-то..."></textarea>
  </div>
       <button type="submit" class="button">Отправить</button>
     </form>
