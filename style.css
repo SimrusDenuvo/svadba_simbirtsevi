@@ -137,19 +137,6 @@ img {
 
 
 /* Стиль программы */
-.program-item {
-    background: #dfc7b2;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    font-size: 30px;
-}
-
-.program-item:hover {
-    background-color: #F3E5D8;
-}
 
 
  .names {
