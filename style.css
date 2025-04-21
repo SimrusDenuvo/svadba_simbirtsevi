@@ -81,13 +81,15 @@ img {
     float: left;
     color: #fff;
     font-size: 40px;
+    margin-left: 20px;
     margin-top: 750px;
 }
 #ruslan{
     float: right;
     color: #fff;
     font-size: 40px;
-    margin-top: 700px;
+    margin-right: 20px;
+    margin-top: 750px;
 }
 /* Стиль таймера */
 .countdown {
