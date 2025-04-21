@@ -149,31 +149,46 @@
             </tr>
             <tr> 
                 <td id="leftcol">
+                    <div class="flex">
                     <div class="block"><h3>15:30</h3><p>Самое главное событие в нашей жизни!</p></div>
+                    <div class="krug"></div>
+                    </div>
                 </td>
                 <td></td>
             </tr>
             <tr> 
                 <td id="leftcol"></td>
                 <td>
-                    <div class="block"> <h3>16:00</h3><p>Запомним этот момент навсегда!</p></div>
+                    <div class="flex">
+                        <div class="krug"></div>
+                        <div class="block"> <h3>16:00</h3><p>Запомним этот момент навсегда!</p></div>
+                    </div>
                 </td>  
             </tr>
             <tr> 
                 <td id="leftcol">
-                    <div class="block"><h3>16:30</h3> <p>Время вкусной еды, танцев и веселья!</p></div>
+                    <div class="flex">
+                        <div class="block"><h3>16:30</h3> <p>Время вкусной еды, танцев и веселья!</p></div>
+                        <div class="krug"></div>
+                    </div>
                 </td>
                 <td></td>
             </tr>
             <tr> 
                 <td id="leftcol"> </td>
                 <td>
-                     <div class="block"><h3>21:30</h3><p>Вечеринка!</p></div>
+                    <div class="flex">
+                        <div class="krug"></div>
+                        <div class="block"><h3>21:30</h3><p>Вечеринка!</p></div>
+                     </div>
                 </td>
             </tr>
             <tr> 
                 <td id="leftcol">
-                    <div class="block"><h3>23:00</h3><p>Завершение вечера</p></div>
+                    <div class="flex">
+                        <div class="block"><h3>23:00</h3><p>Завершение вечера</p></div>
+                        <div class="krug"></div>
+                     </div>
                 </td>
                 <td></td>
             </tr>
@@ -277,9 +292,9 @@
 
     <style type="text/css">
 .krug{
-    background: #32557f;
-    width: 30px;
-    height: 30px;
+    background: #A88160;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
 }
 .icon{
@@ -391,7 +406,9 @@
    }
 .flex{
     display:flex;
-    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
