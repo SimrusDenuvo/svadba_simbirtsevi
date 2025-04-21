@@ -83,6 +83,7 @@ img {
     font-size: 40px;
     margin-left: 20px;
     margin-top: 750px;
+    font-weight: 200;
 }
 #ruslan{
     float: right;
@@ -90,6 +91,7 @@ img {
     font-size: 40px;
     margin-right: 20px;
     margin-top: 750px;
+    font-weight: 200;
 }
 /* Стиль таймера */
 .countdown {
