@@ -356,7 +356,7 @@
 
     .timeline-item {
       width: 800px;
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: flex-start;
       position: relative;
@@ -373,7 +373,12 @@
     .timeline-item.left .timeline-item-content {
       text-align: right;
     }
-
+    .timeline-item.left {
+      float: left;
+    }
+    .timeline-item.right {
+      float: right;
+    }
     .timeline-item.right .timeline-item-content {
       text-align: left;
     }
