@@ -242,11 +242,12 @@
                 <td><a href="tel:+79222013230">+79222013230     </a></td>
             </tr>
         </table>
-        <div class="icon">
+        <div class="icon-left">
                  <a href="https://t.me/Irina_Pukhalskaya" target="_blank" title="Написать в Telegram" rel="noopener noreferrer">
                     <div class="telegram-button"><i class="fa-brands fa-telegram">
                        </i></div></a>
-                
+           </div>
+        <div class="icon-right">
                  <a href="https://t.me/maria_kolpaschikova" target="_blank" title="Написать в Telegram" rel="noopener noreferrer">
                     <div class="telegram-button"><i class="fa-brands fa-telegram">
                        </i></div></a>
@@ -409,6 +410,7 @@
       .timeline-item.left .timeline-item-content {
         width: 50%;
         text-align: left;
+        
       }
       .timeline-item.right .timeline-item-content {
         width: 50%;
@@ -424,26 +426,24 @@
 
 
 
-
-        
+.icon-left{
+    position: fixed; 
+    left: 100px;
+    bottom: 100px;
+}
+.icon-right{
+    position: fixed; 
+    right: 100px;
+    bottom: 100px;
+}    
 .krug{
     background: #A88160;
     width: 25px;
     height: 25px;
     border-radius: 50%;
 }
-.icon{
-    display:flex;
-    margin-top:60px;
-    margin-right:30px;
-    margin-left:60px;
-    justify-content: space-around;
-}
 
-.polosa {
-        background: linear-gradient(#000, #000) no-repeat center/2px 100%; }
-.pol {
-        background: linear-gradient(#fff, #fff) no-repeat center/2px 100%; }
+
    #contact {
     width: 100%; 
     text-align: center;  
