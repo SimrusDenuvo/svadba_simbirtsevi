@@ -133,47 +133,15 @@
     </div>
 </section>
 
-<section>
+<section class="schedule">
     <div class="container">
         <h2>ПРОГРАММА МЕРОПРИЯТИЯ</h2>
-        <div class="polosa">
+      
         <table cellspacing="0" cellpadding="0" id="programma">
-            <tr> 
-                <td id="leftcol"></td>
-                <td>
-                    <div class="flex">
-                        <div class="krug"></div>
-                        <div class="block"> <h3>14:30</h3> <p>Сбор гостей, фуршет <br> Новые знакомства и развлечения </p></div>
-                    </div>
-                </td>
-            </tr>
-            <tr> 
-                <td id="leftcol">
-                    <div class="flex">
-                    <div class="block"><h3>15:30</h3><p>Самое главное событие в нашей жизни!</p></div>
-                    <div class="krug"></div>
-                    </div>
-                </td>
-                <td></td>
-            </tr>
-            <tr> 
-                <td id="leftcol"></td>
-                <td>
-                    <div class="flex">
-                        <div class="krug"></div>
-                        <div class="block"> <h3>16:00</h3><p>Запомним этот момент навсегда!</p></div>
-                    </div>
-                </td>  
-            </tr>
-            <tr> 
-                <td id="leftcol">
-                    <div class="flex">
-                        <div class="block"><h3>16:30</h3> <p>Время вкусной еды, танцев и веселья!</p></div>
-                        <div class="krug"></div>
-                    </div>
-                </td>
-                <td></td>
-            </tr>
+           
+            
+          
+    
             <tr> 
                 <td id="leftcol"> </td>
                 <td>
@@ -193,55 +161,37 @@
                 <td></td>
             </tr>
         </table>
-        </div>
-
-    </div>
-
-
-    <div class="timeline">
-    <div class="timeline-item right">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">14:30</div>
-        <div class="desc">Сбор гостей, фуршет<br>Новые знакомства и развлечения</div>
-      </div>
-    </div>
-    <div class="timeline-item left">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">15:30</div>
-        <div class="desc">Самое главное событие<br>в нашей жизни!</div>
-      </div>
-    </div>
-    <div class="timeline-item right">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">16:00</div>
-        <div class="desc">Запомним этот момент<br>навсегда!</div>
-      </div>
-    </div>
-    <div class="timeline-item left">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">16:30</div>
-        <div class="desc">Время вкусной еды,<br>танцев и веселья!</div>
-      </div>
-    </div>
-    <div class="timeline-item right">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">21:30</div>
-        <div class="desc">Вечеринка!</div>
-      </div>
-    </div>
-    <div class="timeline-item left">
-      <div class="timeline-dot"></div>
-      <div class="timeline-item-content">
-        <div class="time">23:00</div>
-        <div class="desc">Завершение вечера</div>
-      </div>
-    </div>
+            <div class="event">
+    <time>14:30</time>
+    <h3>СБОР ГОСТЕЙ, ФУРШЕТ</h3>
+    <p>Время пролетит незаметно за игристым на фуршете и общением с другими гостями.</p>
   </div>
+  <div class="event">
+    <time>15:30</time>
+    <h3>ЦЕРЕМОНИЯ</h3>
+    <p>Приготовьте носовые платочки для самого трогательного момента.</p>
+  </div>
+  <div class="event">
+    <time>16:00</time>
+    <h3>ФОТОПАУЗА</h3>
+    <p>Никто не останется без ярких кадров с нами на память об этом дне. Запомним этот момент навсегда!</p>
+  </div>
+  <div class="event">
+    <time>16:30</time>
+    <h3>БАНКЕТ</h3>
+    <p>Время вкусной еды, танцев и веселья.</p>
+  </div>
+ <div class="event">
+    <time>21:30</time>
+    <h3>ВЕЧЕРИНКА</h3>
+    <p>Самое время отжигать!</p>
+  </div>
+  <div class="event">
+    <time>23:00</time>
+    <h3>ЗАВЕРШЕНИЕ ВЕЧЕРА</h3>
+  </div>
+    </div>
+
 </section>
 
  <section>
@@ -335,7 +285,66 @@
 </section>
 
     <style type="text/css">
+ .schedule {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
+    .schedule .title {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .schedule .event {
+      margin-bottom: 2rem;
+    }
+
+    .schedule time {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .schedule h3 {
+      font-size: 1.2rem;
+      margin: 0.2rem 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .schedule p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0.5rem 0 0;
+    }
+
+    @media (max-width: 480px) {
+      .schedule .title {
+        font-size: 1.5rem;
+      }
+
+      .schedule time {
+        font-size: 1.3rem;
+      }
+
+      .schedule h3 {
+        font-size: 1rem;
+      }
+
+      .schedule p {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+
+        
          .timeline {
       position: relative;
       max-width: 900px;
