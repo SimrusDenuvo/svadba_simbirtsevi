@@ -405,11 +405,11 @@ img {
 @media (max-width: 768px) {
     #veronika{
     font-size: 34px;
-    margin-top: 500px;
+    margin-top: 600px;
     }
     #ruslan{
     font-size: 34px;
-    margin-top: 550px;
+    margin-top: 650px;
     }
     .grid {
         grid-template-columns: repeat(2, 1fr);
