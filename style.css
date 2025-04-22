@@ -74,7 +74,7 @@ img {
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9)),
      url(svadba/main2.jpg)  no-repeat center center fixed;
     color: #fff; 
-    height: 900px;
+    height: 800px;
     background-size: cover;
 }
 #veronika{
@@ -90,7 +90,7 @@ img {
     color: #fff;
     font-size: 40px;
     margin-right: 20px;
-    margin-top: 750px;
+    margin-top: 700px;
     font-weight: 200;
 }
 /* Стиль таймера */
