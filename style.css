@@ -40,6 +40,7 @@ h1, h2{
     padding: 10px;
     font-size: 40px;
     font-style: 200;
+    line-height: 1.6em;
 }
 
  h3{
@@ -47,6 +48,7 @@ h1, h2{
     color: #000000;
     font-size: 36px;
     margin: 0;
+    font-style: 200;
 }
 p{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -82,7 +84,7 @@ img {
     color: #fff;
     font-size: 40px;
     margin-left: 20px;
-    margin-top: 750px;
+    margin-top: 650px;
     font-weight: 200;
 }
 #ruslan{
@@ -90,7 +92,7 @@ img {
     color: #fff;
     font-size: 40px;
     margin-right: 20px;
-    margin-top: 700px;
+    margin-top: 600px;
     font-weight: 200;
 }
 /* Стиль таймера */
