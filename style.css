@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: fade-in .4s ease;
 }
 
 section {
@@ -22,6 +23,17 @@ section {
     transform: translateY(50px);
     animation: fadeInUp 1s ease-out forwards;
 }
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+ 
 
 @keyframes fadeInUp {
     from {
