@@ -71,7 +71,9 @@ img {
 
 
 
-
+.siluet{
+   background: url(svadba/siluet.png)  no-repeat center center fixed; 
+}
 .image-container {
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9)),
      url(svadba/main2.jpg)  no-repeat center center fixed;
