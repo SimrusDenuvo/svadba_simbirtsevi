@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: fade-in .4s ease;
+
 }
 
 section {
@@ -29,7 +29,8 @@ section {
     padding: 30px;
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 5s ease-out forwards;
+
 }
 
 
