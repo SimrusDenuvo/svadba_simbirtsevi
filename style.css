@@ -29,7 +29,7 @@ section {
     padding: 30px;
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInUp 5s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 
 }
 
