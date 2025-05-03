@@ -642,9 +642,26 @@ table{
     });
   });
 });
-
-
+  
+</script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in');
     
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Можно отключить наблюдение после появления
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1 // Срабатывает когда 10% элемента видно
+    });
+    
+    fadeElements.forEach(el => observer.observe(el));
+  });
 </script>
 </body>
 </html>
